@@ -18,7 +18,12 @@ void draw()
 	 {
 	 	
 		endX = startX + (int)(Math.random()*9);
+		if(endX<800)
+		{
 		endY = startY + (int)(Math.random()*18)-9;
+		} else {
+			endY = startY + (int)(Math.random()*18)-3;
+		}
 		underCurve();
 		stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
 		line(startX,startY,endX,endY);
