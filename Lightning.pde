@@ -18,9 +18,9 @@ void draw()
 	 {
 	 	
 		endX = startX + (int)(Math.random()*9);
-		if(endX<800)
+		if(endX<750)
 		{
-		endY = startY + (int)(Math.random()*18)-9;
+		endY = startY + (int)(Math.random()*18)-10;
 		} else {
 			endY = startY + (int)(Math.random()*18)-3;
 		}
