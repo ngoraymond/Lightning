@@ -2,6 +2,8 @@ int startX = 0;
 int startY = (int)(Math.random()*250)+250;
 int endX = 0;
 int endY = startY;
+int choice=(int)(Math.random()*8);
+String[] companies = {"Apple","Goldman Sachs","Lehman Brothers","Citigroup","Bear Stearns","Wachovia", "Ford", "Walmart"};
 void setup()
 {
   size(1000,500);
@@ -25,12 +27,15 @@ void draw()
 			endY = startY + (int)(Math.random()*18)-3;
 		}
 		underCurve();
+		textSize(20);
+		fill(0);
+		text(companies[choice],500,450);
 		stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
 		line(startX,startY,endX,endY);
 		startX = endX;
 		startY = endY;
-		
 	}
+	
 	
 	
 }
@@ -54,5 +59,7 @@ void mousePressed()
 	startY=(int)(Math.random()*250)+250;
 	endX=0;
 	endY=startY;	
+	choice=(int)(Math.random()*8);
+
 }
 
